@@ -29,6 +29,11 @@ return array(
     'App\\Http\\Middleware\\TrustProxies' => $baseDir . '/app/Http/Middleware/TrustProxies.php',
     'App\\Http\\Middleware\\VerifyCsrfToken' => $baseDir . '/app/Http/Middleware/VerifyCsrfToken.php',
     'App\\Http\\Requests\\TagRequest' => $baseDir . '/app/Http/Requests/TagRequest.php',
+    'App\\Models\\ControleAssunto' => $baseDir . '/app/Models/ControleAssunto.php',
+    'App\\Models\\ControleAutor' => $baseDir . '/app/Models/ControleAutor.php',
+    'App\\Models\\ControleLivro' => $baseDir . '/app/Models/ControleLivro.php',
+    'App\\Models\\ControleLivroAssunto' => $baseDir . '/app/Models/ControleLivroAssunto.php',
+    'App\\Models\\ControleLivroAutor' => $baseDir . '/app/Models/ControleLivroAutor.php',
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',
     'App\\Providers\\AuthServiceProvider' => $baseDir . '/app/Providers/AuthServiceProvider.php',
     'App\\Providers\\BroadcastServiceProvider' => $baseDir . '/app/Providers/BroadcastServiceProvider.php',
@@ -4434,4 +4439,5 @@ return array(
     'Yajra\\DataTables\\Utilities\\Config' => $vendorDir . '/yajra/laravel-datatables-oracle/src/Utilities/Config.php',
     'Yajra\\DataTables\\Utilities\\Helper' => $vendorDir . '/yajra/laravel-datatables-oracle/src/Utilities/Helper.php',
     'Yajra\\DataTables\\Utilities\\Request' => $vendorDir . '/yajra/laravel-datatables-oracle/src/Utilities/Request.php',
+    'livros' => $baseDir . '/database/seeds/livros.php',
 );

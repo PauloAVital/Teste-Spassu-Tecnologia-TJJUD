@@ -489,6 +489,11 @@ class ComposerStaticInit03dcc38f873c41d95e7e0d3d09ed2317
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
         'App\\Http\\Requests\\TagRequest' => __DIR__ . '/../..' . '/app/Http/Requests/TagRequest.php',
+        'App\\Models\\ControleAssunto' => __DIR__ . '/../..' . '/app/Models/ControleAssunto.php',
+        'App\\Models\\ControleAutor' => __DIR__ . '/../..' . '/app/Models/ControleAutor.php',
+        'App\\Models\\ControleLivro' => __DIR__ . '/../..' . '/app/Models/ControleLivro.php',
+        'App\\Models\\ControleLivroAssunto' => __DIR__ . '/../..' . '/app/Models/ControleLivroAssunto.php',
+        'App\\Models\\ControleLivroAutor' => __DIR__ . '/../..' . '/app/Models/ControleLivroAutor.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
@@ -4894,6 +4899,7 @@ class ComposerStaticInit03dcc38f873c41d95e7e0d3d09ed2317
         'Yajra\\DataTables\\Utilities\\Config' => __DIR__ . '/..' . '/yajra/laravel-datatables-oracle/src/Utilities/Config.php',
         'Yajra\\DataTables\\Utilities\\Helper' => __DIR__ . '/..' . '/yajra/laravel-datatables-oracle/src/Utilities/Helper.php',
         'Yajra\\DataTables\\Utilities\\Request' => __DIR__ . '/..' . '/yajra/laravel-datatables-oracle/src/Utilities/Request.php',
+        'livros' => __DIR__ . '/../..' . '/database/seeds/livros.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
