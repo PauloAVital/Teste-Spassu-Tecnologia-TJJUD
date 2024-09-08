@@ -15,6 +15,7 @@
 
 ## crie uma chave para o artisan
 7. **sudo docker-compose exec app php artisan key:generate**
+7. **sudo docker-compose exec app php artisan jwt:secret**
 8. ![Título da imagem](public/img/key.png)
 ---
 
@@ -50,3 +51,19 @@ Comando no terminal:
 18. Crie seu usuario e realize o login 
 19. ![Título da imagem](public/img/login.png)
 
+## Etapa da API's
+
+20. Segue as Collections das Api's criadas.
+21. ![Título da imagem](public/img/collection.png)
+
+22. Todas as Api's são acessadas por atutenticação jwt por esse motivo existe o cadastro de acesso na tela principal
+23. ![Título da imagem](public/img/Authentication.png)
+
+24. No Verbo (GET) do Search-Livro ja está implementada a ViewLivro.
+25. ![Título da imagem](public/img/search-Livros.png)
+
+26. No Verbo (Post) do Insert-Livros Um Json pode ser enviado incluindo os dados do Livro, Assunto e Autores que ja seram implementados.
+27. ![Título da imagem](public/img/insert-livros.png)
+
+28. No Verbo (Put) do Update-Livros Um Json pode ser enviado incluindo os dados do Livro, Assunto e Autores que ja seram implementados.
+29. ![Título da imagem](public/img/Update-Livros.png)

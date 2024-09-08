@@ -18,11 +18,14 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-
 Route::post('login', 'Auth\AuthenticateControllerLogin@authenticate');
 Route::post('login-refresh', 'Auth\AuthenticateControllerLogin@refreshToken');
 Route::get('me', 'Auth\AuthenticateControllerLogin@getAuthenticatedUser');
 
-Route::apiResource('User', 'Api\UserController');
-Route::apiResource('Products', 'Api\ProductController');
+Route::group(['namespace' => 'Api', 'middleware' => 'auth:api'], function (){
+    Route::apiResource('Livros', 'LivroController');
+    Route::apiResource('User', 'UserController');
+    Route::apiResource('Autor', 'AutorController');
+    Route::apiResource('Assunto', 'AssuntoController');
+});
 

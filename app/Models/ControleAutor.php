@@ -10,12 +10,14 @@ class ControleAutor extends Model
 
     protected $fillable = [
                             'CodAu',
+                            'Livro_Codl',
                             'Nome'
                           ];
 
     public function rules()
     {
         return [
+            'Livro_Codl' => 'required:Autor',
             'Nome' => 'required:Autor'
         ];
     }

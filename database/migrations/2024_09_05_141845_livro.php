@@ -14,7 +14,7 @@ class Livro extends Migration
     public function up()
     {
         Schema::create('Livro', function (Blueprint $table) {
-            $table->increments('Codl');
+            $table->increments('Codl');            
             $table->string('Titulo', 100);
             $table->string('Editora', 40);
             $table->integer('Edicao');

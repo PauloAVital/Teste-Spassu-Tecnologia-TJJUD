@@ -15,6 +15,8 @@ class Autor extends Migration
     {
         Schema::create('Autor', function (Blueprint $table) {
             $table->increments('CodAu');
+            $table->integer('Livro_Codl')->unsigned();
+            $table->foreign('Livro_Codl')->references('Codl')->on('Livro')->onDelete('cascade')->onUpdate('cascade');
             $table->string('Nome', 80);
             $table->timestamps();
         });
