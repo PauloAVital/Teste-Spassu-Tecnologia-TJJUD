@@ -10,12 +10,14 @@ class ControleAssunto extends Model
 
     protected $fillable = [
                             'CodAs',
+                            'Livro_Codl',
                             'Descricao'
                           ];
 
     public function rules()
     {
         return [
+            'Livro_Codl' => 'required:Assunto',
             'Descricao' => 'required:Assunto'
         ];
     }

@@ -8,8 +8,12 @@ use App\User;
 
 class UserController extends Controller
 {
-    public function __construct(User $user,
-                                Request $Request)
+    private $user;
+    private $request;
+
+    public function __construct(
+        User $user,
+        Request $Request)
     {
         $this->user = $user;
         $this->request = $Request;

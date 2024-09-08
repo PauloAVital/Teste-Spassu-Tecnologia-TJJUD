@@ -1,0 +1,518 @@
+{
+	"info": {
+		"_postman_id": "9057aac5-0e95-4c7c-a5db-0735c2e3276f",
+		"name": "Spassu-Tecnologia-TJJUD",
+		"description": "# 🚀 Get started here\n\nThis template guides you through CRUD operations (GET, POST, PUT, DELETE), variables, and tests.\n\n## 🔖 **How to use this template**\n\n#### **Step 1: Send requests**\n\nRESTful APIs allow you to perform CRUD operations using the POST, GET, PUT, and DELETE HTTP methods.\n\nThis collection contains each of these [request](https://learning.postman.com/docs/sending-requests/requests/) types. Open each request and click \"Send\" to see what happens.\n\n#### **Step 2: View responses**\n\nObserve the response tab for status code (200 OK), response time, and size.\n\n#### **Step 3: Send new Body data**\n\nUpdate or add new data in \"Body\" in the POST request. Typically, Body data is also used in PUT request.\n\n```\n{\n    \"name\": \"Add your name in the body\"\n}\n\n ```\n\n#### **Step 4: Update the variable**\n\nVariables enable you to store and reuse values in Postman. We have created a [variable](https://learning.postman.com/docs/sending-requests/variables/) called `base_url` with the sample request [https://postman-api-learner.glitch.me](https://postman-api-learner.glitch.me). Replace it with your API endpoint to customize this collection.\n\n#### **Step 5: Add tests in the \"Scripts\" tab**\n\nAdding tests to your requests can help you confirm that your API is working as expected. You can write test scripts in JavaScript and view the output in the \"Test Results\" tab.\n\n<img src=\"https://content.pstmn.io/fa30ea0a-373d-4545-a668-e7b283cca343/aW1hZ2UucG5n\" alt=\"\" height=\"1530\" width=\"2162\">\n\n## 💪 Pro tips\n\n- Use folders to group related requests and organize the collection.\n    \n- Add more [scripts](https://learning.postman.com/docs/writing-scripts/intro-to-scripts/) to verify if the API works as expected and execute workflows.\n    \n\n## 💡Related templates\n\n[API testing basics](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=e9a37a28-055b-49cd-8c7e-97494a21eb54&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)  \n[API documentation](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=e9c28f47-1253-44af-a2f3-20dce4da1f18&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)  \n[Authorization methods](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=31a9a6ed-4cdf-4ced-984c-d12c9aec1c27&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8883012"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "localhost:8000/api/login?email=pauloavital@gmail.com&password=12345678",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/login?email=pauloavital@gmail.com&password=123456789",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"login"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "pauloavital@gmail.com"
+								},
+								{
+									"key": "password",
+									"value": "123456789"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8000/api/login-refresh?email=pauloavital@gmail.com&password=12345678",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY3NzI2NTkxNywiZXhwIjoxNjc3Mjc2NzE3LCJuYmYiOjE2NzcyNjU5MTcsImp0aSI6ImVkUnNiWXZDTEVTclF3SWsiLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.9V7m0y01bNGzVhVqXt0-ubJfzcR250C46LkO2bAOaXI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8000/api/login-refresh?email=pauloavital@gmail.com&password=123456789",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"login-refresh"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "pauloavital@gmail.com"
+								},
+								{
+									"key": "password",
+									"value": "123456789"
+								}
+							]
+						},
+						"description": "Gera Token"
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8000/api/login-refresh",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTYwMzIyNjU2MiwiZXhwIjoxNjAzMjMwMTYyLCJuYmYiOjE2MDMyMjY1NjIsImp0aSI6IklQM2JZN0s3WWFGUFJvdjAiLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.ZP85gldYktd17WgnTDRc5Xgk23tvgfSNPd4_hM2A1Gs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/login-refresh",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"login-refresh"
+							]
+						},
+						"description": "Token-Refresh"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Livro",
+			"item": [
+				{
+					"name": "Search-Livros",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTcyNTcxODIxNCwiZXhwIjoxNzI1NzIxODE0LCJuYmYiOjE3MjU3MTgyMTQsImp0aSI6IkRZODgwcUo0aldza2VWN3giLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.qErqcTU2i7eNAZeintnh-bGt5EKo5NQH4J2LIR57FVM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/Livros/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"Livros",
+								"1"
+							]
+						},
+						"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+					},
+					"response": []
+				},
+				{
+					"name": "Delete-Livros",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/Livros/3",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"Livros",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update-Livros",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Titulo\": \"Novo Teste5\",\n    \"Editora\": \"Novo Teste5\",\n    \"Edicao\": 5,\n    \"Valor\": \"557.50\",\n    \"Ano_Publicacao\": \"2021\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/Livros/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"Livros",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert-Livros",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTcyNTczNDA4OCwiZXhwIjoxNzI1NzM3Njg4LCJuYmYiOjE3MjU3MzQwODgsImp0aSI6ImNCY3Zvb3U5bEpGVmk5WFkiLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.furZQ3klV4EA7phajvSMVAAf4k9Y5s_NBucq0Qoja3o",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Titulo\": \"Novo Livro 1\",\n    \"Editora\": \"Novo Livro 1\",\n    \"Edicao\": 1,\n    \"Valor\": \"7999.90\",\n    \"Ano_Publicacao\": \"2024\",\n    \"Assunto\": { \n        \"Assunto\" :\" Justiça Multiportas\"\n    },    \n    \"Autor\": \n        [   { \"Nome\": \"EMERSOM GARCIA\" },\n            { \"Nome\": \"FERNANDA GUEIROS\"},\n            { \"Nome\": \"PAULA COSTA E SILVA\"}\n        ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/Livros",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"Livros"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Autor",
+			"item": [
+				{
+					"name": "Search-Autor",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTcyNTcxODIxNCwiZXhwIjoxNzI1NzIxODE0LCJuYmYiOjE3MjU3MTgyMTQsImp0aSI6IkRZODgwcUo0aldza2VWN3giLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.qErqcTU2i7eNAZeintnh-bGt5EKo5NQH4J2LIR57FVM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/Autor",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"Autor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert-Autor",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTcyNTcxODIxNCwiZXhwIjoxNzI1NzIxODE0LCJuYmYiOjE3MjU3MTgyMTQsImp0aSI6IkRZODgwcUo0aldza2VWN3giLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.qErqcTU2i7eNAZeintnh-bGt5EKo5NQH4J2LIR57FVM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Nome\": \"Paulo Antonio Vital\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/Autor",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"Autor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update-Autor",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTcyNTcxODIxNCwiZXhwIjoxNzI1NzIxODE0LCJuYmYiOjE3MjU3MTgyMTQsImp0aSI6IkRZODgwcUo0aldza2VWN3giLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.qErqcTU2i7eNAZeintnh-bGt5EKo5NQH4J2LIR57FVM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Nome\": \"Paulo Antonio Vital UP\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/Autor/51",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"Autor",
+								"51"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete-Autor",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTcyNTcxOTc1NywiZXhwIjoxNzI1NzIzMzU3LCJuYmYiOjE3MjU3MTk3NTcsImp0aSI6IkNYQTQ3blZmVDl4OHRIcEgiLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.sglA_gJnRyzlvVzQQI621InJ9IbhGdjtH6ndVHh-RGc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/Autor/51",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"Autor",
+								"51"
+							],
+							"query": [
+								{
+									"key": "Authorization",
+									"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTcyNTcyMDI1MCwiZXhwIjoxNzI1NzIzODUwLCJuYmYiOjE3MjU3MjAyNTAsImp0aSI6IkFOZWRuQnJRaE5SSmdZVUoiLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.Dd6hgmGvoWFZkNth1rMdTnuCAJt9u0cwsqoyz0AmGm4",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Assunto",
+			"item": [
+				{
+					"name": "Search-Assunto",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTcyNTcyMDI1MCwiZXhwIjoxNzI1NzIzODUwLCJuYmYiOjE3MjU3MjAyNTAsImp0aSI6IkFOZWRuQnJRaE5SSmdZVUoiLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.Dd6hgmGvoWFZkNth1rMdTnuCAJt9u0cwsqoyz0AmGm4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/Assunto",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"Assunto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert-Assunto",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTcyNTcyMDI1MCwiZXhwIjoxNzI1NzIzODUwLCJuYmYiOjE3MjU3MjAyNTAsImp0aSI6IkFOZWRuQnJRaE5SSmdZVUoiLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.Dd6hgmGvoWFZkNth1rMdTnuCAJt9u0cwsqoyz0AmGm4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Descricao\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/Assunto",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"Assunto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update-Assunto",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTcyNTcyMDI1MCwiZXhwIjoxNzI1NzIzODUwLCJuYmYiOjE3MjU3MjAyNTAsImp0aSI6IkFOZWRuQnJRaE5SSmdZVUoiLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.Dd6hgmGvoWFZkNth1rMdTnuCAJt9u0cwsqoyz0AmGm4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Descricao\": \"Update\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/Assunto/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"Assunto",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete-Assunto",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTcyNTcyMDI1MCwiZXhwIjoxNzI1NzIzODUwLCJuYmYiOjE3MjU3MjAyNTAsImp0aSI6IkFOZWRuQnJRaE5SSmdZVUoiLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.Dd6hgmGvoWFZkNth1rMdTnuCAJt9u0cwsqoyz0AmGm4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/Assunto/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"Assunto",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "id",
+			"value": "1"
+		},
+		{
+			"key": "base_url",
+			"value": "https://postman-rest-api-learner.glitch.me/"
+		}
+	]
+}

@@ -15,6 +15,8 @@ class Assunto extends Migration
     {
         Schema::create('Assunto', function (Blueprint $table) {
             $table->increments('CodAs');
+            $table->integer('Livro_Codl')->unsigned();
+            $table->foreign('Livro_Codl')->references('Codl')->on('Livro')->onDelete('cascade')->onUpdate('cascade');
             $table->text('Descricao');
             $table->timestamps();
         });
