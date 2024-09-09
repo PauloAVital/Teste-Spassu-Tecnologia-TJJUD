@@ -47,7 +47,7 @@ class AssuntoController extends Controller
     public function store(Request $request)
     {
         try {
-            $dataAssunto =  $request->all();            
+            $dataAssunto =  $request->all();
 
             $retValidaApiAssunto = $this->validarApi($dataAssunto);
             $returnValidaApiAssunto = json_decode($retValidaApiAssunto->content(), true);

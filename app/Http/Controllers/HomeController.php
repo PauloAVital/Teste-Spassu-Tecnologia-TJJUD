@@ -2,23 +2,22 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use GuzzleHttp\Client;
-use DataTables;
-use App\User;
+use App\Models\ControleLivrosView;
+use App\Models\ControleAssunto;
+use App\Models\ControleAutor;
+
 
 class HomeController extends Controller
 {
-    private $objuser;
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
+    private $assunto;
+    
+    private $autor;
+
     public function __construct()
     {
-        $this->objuser = new User();
-        $this->middleware('auth');
+        $this->assunto = new ControleAssunto();
+        
+        $this->autor = new ControleAutor();
     }
 
     /**
@@ -27,17 +26,13 @@ class HomeController extends Controller
      * @return \Illuminate\Contracts\Support\Renderable
      */
     public function index()
-    {        
-        return view('home');
-    }
+    { 
+        $livros = ControleLivrosView::select("*")
+                ->get()
+                ->toArray();
+        $assunto = ControleAssunto::all();
+        $autor = ControleAutor::all();
 
-    public function search()
-    {      
-        //return view('admin.pages.tags.index', compact('teste2'));
-        $users = $this->objuser->all();
-        //dd($users);
-        return view('admin.pages.search.index', compact('users'));
+        return view('home', compact(['livros', 'assunto', 'autor']));
     }
-
-    
 }
