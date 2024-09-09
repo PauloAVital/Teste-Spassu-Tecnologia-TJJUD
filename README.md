@@ -1,5 +1,6 @@
 # Teste-Desenvolvimento-Spassu
 
+# Gostaria de Agradecer a Oportunidade de demonstrar meus conhecimento e pedir perdão por ter tomado a liberdade de realizar outras funcinalidades não solicitados no teste, fiz isso apenas para expor o meu conhecimento em divesas maneiras de programar, visando apenas conseguir a vaga com muita diligência e esforço.
 ---
 ## Subindo o Docker para rodar o app
 1. **sudo docker-compose build app**
@@ -67,3 +68,15 @@ Comando no terminal:
 
 28. No Verbo (Put) do Update-Livros Um Json pode ser enviado incluindo os dados do Livro, Assunto e Autores que ja seram implementados.
 29. ![Título da imagem](public/img/Update-Livros.png)
+
+## LAYOUT FRONT END
+
+30. Neste passo eu decide tbem fazer uma demostração de insert via web do laravel para mostrar ainda mais o meu conhecimento tanto em API's quanto em desenvolvimento interno utilizando o laravel, javascript, bootstrap entre outros.
+
+30. Tela de Cadastro de Livro junto com o Autor e Assunto que tbem tem telas para cadastrar
+ ![Título da imagem](public/img/Cadastro_de_livro.png)
+![Título da imagem](public/img/Cadastro_Assunto.png)
+![Título da imagem](public/img/Cadastro_autor.png)
+
+31. Decidi por conta propria implementar um datatable com diversas opçoes de exportação dos dados.. conforme imagem abaixo
+32. ![Título da imagem](public/img/datatableExport.png)
