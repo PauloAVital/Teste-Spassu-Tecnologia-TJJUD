@@ -49,8 +49,8 @@
                                     class="alert alert-success alert-dismissible " 
                                     role="alert" 
                                     style="display: none"
-                                    id="success_nome"
-                                    name="success_nome"
+                                    id="success_autor"
+                                    name="success_autor"
                                 >
                                     <strong>Nome</strong> Foi Cadastrada com Sucesso.
                                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
