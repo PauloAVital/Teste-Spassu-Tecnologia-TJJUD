@@ -76,7 +76,7 @@ class LivroController extends Controller
                  FROM Autor
                  WHERE CodAu in ('{$listAutores}')"
             );
-dd($listAutor);
+
             foreach ($listAutor as $autores) {
                 $insertAutor = $dataAutorInsert = [
                     'Livro_Codl' => $Codl['id'],
